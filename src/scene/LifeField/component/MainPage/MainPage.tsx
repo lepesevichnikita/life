@@ -9,6 +9,7 @@ type FieldSettings = {
   fieldHeight: number;
   fieldWidth: number;
   generationDensity: number;
+  delay: number;
 };
 
 const DEFAULT_GENERATION_STATE: string = GenerationState.PAUSED;
@@ -16,7 +17,8 @@ const DEFAULT_DELAY: number = 50;
 const DEFAULT_FIELD_SETTINGS: FieldSettings = {
   fieldHeight: 50,
   fieldWidth: 50,
-  generationDensity: 0.5
+  generationDensity: 0.5,
+  delay: 50
 };
 
 const delay = async (timeout: number) => {
@@ -52,7 +54,7 @@ export const MainPage: React.FC = (): JSX.Element => {
                                                                                        fieldSettings.fieldHeight);
     if (generationState === GenerationState.ALIVE) {
       setGenerationState(GenerationState.PAUSED);
-      delay(DEFAULT_DELAY).then(() => {
+      delay(fieldSettings.delay).then(() => {
         setGeneration(newRandomGeneration);
       })
     } else {
@@ -66,7 +68,7 @@ export const MainPage: React.FC = (): JSX.Element => {
         setGenerationState(GenerationState.PAUSED);
       } else {
         const calculateNextGeneration = async () => {
-          await delay(DEFAULT_DELAY);
+          await delay(fieldSettings.delay);
           const nextGeneration: Array<Array<boolean>> = LifeUtil.getNextGeneration(generation);
           if (LifeUtil.isEqualsGenerations(generation, nextGeneration)) {
             setGenerationState(GenerationState.PAUSED);
@@ -77,11 +79,11 @@ export const MainPage: React.FC = (): JSX.Element => {
         calculateNextGeneration();
       }
     }
-  }, [generationState, generation]);
+  }, [generationState, generation, fieldSettings.delay]);
 
   useEffect(() => {
     generateNewRandomGeneration();
-  }, [fieldSettings])
+  }, [fieldSettings.fieldWidth, fieldSettings.fieldHeight, fieldSettings.generationDensity])
 
   return (
       <Panel>
