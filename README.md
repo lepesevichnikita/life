@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Life-like cellular automaton (Conway's Game of Life)
+
+## Wiki
+
+- [Life-like cellular automaton](https://en.wikipedia.org/wiki/Life-like_cellular_automaton)
+- [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+
+* You can see result by following link: [https://nl-life.herokuapp.com/](https://nl-life.herokuapp.com)
 
 ## Available Scripts
 
