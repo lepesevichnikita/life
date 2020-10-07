@@ -1,0 +1,9 @@
+.Cell {
+    border: 1px solid rgb(72, 72, 74);
+    width: 10px;
+    height: 10px;
+}
+
+.Cell.Alive {
+    background-color: rgba(44, 44, 46, 0.5);
+}

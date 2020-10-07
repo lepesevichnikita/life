@@ -1,0 +1,26 @@
+.Panel {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+}
+
+.Panel.Inline {
+    flex-direction: row;
+}
+
+.Panel.Light {
+    background-color: rgb(242, 242, 247);
+}
+
+.Pane.Inline > * {
+    flex: 1 1;
+}
+
+.Panel > label {
+    align-self: center;
+}
+
