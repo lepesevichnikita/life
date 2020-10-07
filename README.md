@@ -2,10 +2,10 @@
 
 ## Wiki
 
-- [https://en.wikipedia.org/wiki/Life-like_cellular_automaton](Life-like cellular automaton)
-- [https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life](Conway's Game of Life)
+- [Life-like cellular automaton)](https://en.wikipedia.org/wiki/Life-like_cellular_automaton)
+- [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
-* You can see result by following link: [https://nl-life.herokuapp.com/(https://nl-life.herokuapp.com/)
+* You can see result by following link: [https://nl-life.herokuapp.com/](https://nl-life.herokuapp.com)
 
 ## Available Scripts
 
