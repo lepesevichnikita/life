@@ -47,7 +47,7 @@ export class LifeUtil {
   }
 
   public static isGenerationDead(sourceGeneration: Array<Array<boolean>>): boolean {
-    return sourceGeneration.some((row: Array<boolean>): boolean => row.some((isCellAlive: boolean): boolean => !isCellAlive));
+    return !sourceGeneration.some((row: Array<boolean>): boolean => row.some((isCellAlive: boolean): boolean => isCellAlive));
   }
 
   private static getCountOfAliveNeighbours(rowNumber: number,
